@@ -19,6 +19,9 @@ class SearchBox extends Component {
       .then((res) => res.json())
       .then((data) => {
         this.props.dispatch(addMovies(data.Search));
+      })
+      .catch((error) => {
+        alert(error)
       });
   };
 
